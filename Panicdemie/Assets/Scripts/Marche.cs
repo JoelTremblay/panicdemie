@@ -5,8 +5,8 @@ using UnityEngine;
 public class Marche : MonoBehaviour
 {
 
-    public bool MarchePerso;
-    public GameObject[] Perso;
+    public bool marchePerso;
+    public GameObject[] perso;
 
     // Start is called before the first frame update
     void Start()
