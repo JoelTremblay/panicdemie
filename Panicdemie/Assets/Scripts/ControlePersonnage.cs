@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Marche : MonoBehaviour
+public class ControlePersonnage : MonoBehaviour
 {
 
     public float vitesseX;
