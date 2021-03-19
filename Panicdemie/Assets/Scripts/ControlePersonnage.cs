@@ -34,7 +34,7 @@ public class Marche : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "PieceOr")
+        if (collision.gameObject.name == "pieceOr")
         {
             TextePointage.compteur += 5;
 
