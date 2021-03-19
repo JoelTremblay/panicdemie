@@ -20,16 +20,27 @@ public class ControlePersonnage : MonoBehaviour
     {
         if (Input.GetKey("d"))
             {
-                vitesseX = 1;
+                vitesseX = 5;
             }
             else if (Input.GetKey("a"))
             {
-                vitesseX = -1;
+                vitesseX = -5;
             }
             else
             {
                 vitesseX = GetComponent<Rigidbody2D>().velocity.x;
             }
+
+            if (Input.GetKeyDown("w"))
+            {
+                vitesseY = 6.5f;
+            }
+            else
+            {
+                vitesseY = GetComponent<Rigidbody2D>().velocity.y;
+            }
+
+            GetComponent<Rigidbody2D>().velocity = new Vector2(vitesseX, vitesseY);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
