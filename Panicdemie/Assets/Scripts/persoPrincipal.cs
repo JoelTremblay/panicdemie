@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Marche : MonoBehaviour
+public class persoPrincipal : MonoBehaviour
 {
 
     /* public bool MarchePerso;
