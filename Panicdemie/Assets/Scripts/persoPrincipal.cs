@@ -1,24 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class persoPrincipal : MonoBehaviour
 {
 
-    /* public bool MarchePerso;
-    public GameObject[] Perso; */
+    
 
     public float vitesseX; // déplacement dans l'axe horizontale
     public float vitesseY; // déplacement dans l'axe verticale
     public float vitesseSaut=10;
     public float vitesseNormale=5;
 
+
+    public Text compteurArgent;
+    public static int compteur = 0;
+
     private bool partieTermnine= false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        compteur = 0;
     }
 
     // Update is called once per frame
@@ -69,6 +73,22 @@ public class persoPrincipal : MonoBehaviour
         }//fin de partie termine
     }// void update
 
-   
+    /****************************************************
+    Détection des collisions
+    *****************************************************/
+
+
+    void OnCollisionEnter2D(Collision2D infosCollision)
+
+        {   
+            
+            if(infosCollision.gameObject.tag =="dollars")
+            {
+                 Destroy(infosCollision.gameObject); // détruit les dollars
+                compteur+= 10; //l'argent augmente de 10 dollars si touche le coin jaune
+                compteurArgent.text=""+ compteur;
+            }
+
+        }
 
 }
