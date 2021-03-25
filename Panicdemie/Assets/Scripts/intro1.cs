@@ -10,9 +10,5 @@ public class intro1 : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void click()
-    {
-        gameObject.SetActive(false);
-        
-    }
+
 }
