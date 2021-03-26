@@ -33,10 +33,10 @@ public class persoPrincipal : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftArrow)) // vers la gauche
  
             {
-                 GetComponent<SpriteRenderer>().flipX=false;
+                
                 print(KeyCode.LeftArrow);
                 vitesseX = -vitesseNormale;
-             
+                GetComponent<SpriteRenderer>().flipX=true;
                 
             }
 
@@ -44,8 +44,7 @@ public class persoPrincipal : MonoBehaviour
             {
                 print(KeyCode.RightArrow);
                 vitesseX = vitesseNormale;
-                
-                GetComponent<SpriteRenderer>().flipX=true;
+                GetComponent<SpriteRenderer>().flipX=false;
                 
             }
 
