@@ -17,7 +17,7 @@ public class ButtonPause : MonoBehaviour
     }
 
     public void OnRestart(){ // BOUTON = RESTART
-        //Loading Scene0
+        //Loading Scene3
         UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         Time.timeScale = 1f;
     }
