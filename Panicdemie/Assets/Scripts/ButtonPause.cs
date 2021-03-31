@@ -5,7 +5,6 @@ using UnityEngine;
 public class ButtonPause : MonoBehaviour
 {
     public GameObject ingameMenu;
-    public GameObject menuMarchand;
 
     public void OnPause(){ // BOUTON = PAUSE
         marchand.frozen = true;
