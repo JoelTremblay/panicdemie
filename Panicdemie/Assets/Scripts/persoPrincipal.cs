@@ -22,7 +22,9 @@ public class persoPrincipal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         compteur = 0;
+
     }
 
     // Update is called once per frame
@@ -30,8 +32,9 @@ public class persoPrincipal : MonoBehaviour
     {
             if (partieTermnine == false)//si la partie n'est pas perdu
         {
+            if (marchand.frozen == false)
+            {
             if (Input.GetKey(KeyCode.LeftArrow)) // vers la gauche
- 
             {
                 
                 print(KeyCode.LeftArrow);
@@ -42,13 +45,16 @@ public class persoPrincipal : MonoBehaviour
 
             else if (Input.GetKey(KeyCode.RightArrow)) //vers la droite
             {
+
                 print(KeyCode.RightArrow);
                 vitesseX = vitesseNormale;
                 GetComponent<SpriteRenderer>().flipX=false;
                 
             }
 
-            else {
+            else 
+            {
+
                 vitesseY = GetComponent<Rigidbody2D>().velocity.x; //vitesse actuelle
                 vitesseX = 0;  //pour empêcher que ça continue d'avancer si aucune touches
                 
@@ -59,18 +65,21 @@ public class persoPrincipal : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity=new Vector2(vitesseX,vitesseY);
 
         //Animation des sprites
-           if(vitesseX > 0.9f || vitesseX < -0.9f)
+           if (vitesseX > 0.9f || vitesseX < -0.9f)
            {
  
-        GetComponent<Animator>().SetBool("marche",true); //animation de course activé
+                GetComponent<Animator>().SetBool("marche",true); //animation de course activé
  
            }
-           else
+
+           else 
            {
-         GetComponent<Animator>().SetBool("marche",false); //animation de course non activé
+
+                GetComponent<Animator>().SetBool("marche",false); //animation de course non activé
+
            }
     
-
+            }
         }//fin de partie termine
     }// void update
 
@@ -83,11 +92,13 @@ public class persoPrincipal : MonoBehaviour
 
         {   
             
-            if(infosCollision.gameObject.tag =="dollars")
+            if(infosCollision.gameObject.tag == "dollars")
             {
-                 Destroy(infosCollision.gameObject); // détruit les dollars
+
+                Destroy(infosCollision.gameObject); // détruit les dollars
                 compteur+= 10; //l'argent augmente de 10 dollars si touche le coin jaune
                 compteurArgent.text=""+ compteur;
+
             }
 
         }
