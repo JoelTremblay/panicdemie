@@ -19,7 +19,7 @@ public class marchand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inTrigger && Input.GetKeyDown(KeyCode.E)) 
+        if(inTrigger && Input.GetKeyDown(KeyCode.E) || menuMagasin.activeSelf) 
         {
         
             menuMagasin.SetActive(true);
