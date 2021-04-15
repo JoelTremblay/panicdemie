@@ -695,7 +695,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ea3a09eccf12e4fc48356e7a0fa156a0, type: 3}
+    m_Font: {fileID: 12800000, guid: f3e6a2b5763ef43a08aaee9534e90887, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -707,7 +707,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PANDEMIE MONDIALE DECLARE
+  m_Text: "PANDEMIE MONDIALE DECLAR\xC9"
 --- !u!222 &917379297
 CanvasRenderer:
   m_ObjectHideFlags: 0
