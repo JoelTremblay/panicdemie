@@ -6,6 +6,7 @@ TagManager:
   tags:
   - dollars
   - marchand
+  - inventaire
   layers:
   - Default
   - TransparentFX

@@ -11,15 +11,15 @@ public class ButtonPause : MonoBehaviour
         ingameMenu.SetActive(true);
     }
 
-    public void OnResume(){ // BOUTON = CONTINUER
+    public void OnResume(){ // BOUTON = JOUER
         marchand.frozen = false;
         ingameMenu.SetActive(false);
     }
 
     public void OnRestart(){ // BOUTON = RESTART
-        //Loading Scene4 = seceneIntro
+        //Loading Scene3
         marchand.frozen = false;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
     }
 
 }
