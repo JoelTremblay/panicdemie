@@ -707,7 +707,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PANDEMIE MONDIALE DECLARE
+  m_Text: "PANDEMIE MONDIALE DECLAR\xC9"
 --- !u!222 &917379297
 CanvasRenderer:
   m_ObjectHideFlags: 0
