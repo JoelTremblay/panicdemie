@@ -25,7 +25,7 @@ public class infoBulle : MonoBehaviour
                 texteStats += stat.Key.ToString() + ": " + stat.Value.ToString() + "\n";
             }
         }
-        string texteinfobulle = string.Format("<b>{0}</b>\n{1}\n\n<b>{2}</b>", item.titre, item.description, texteStats);
+        string texteinfobulle = string.Format("{0}\n{1}\n{2}\n{3}", item.titre, item.description, "Prix: " + item.prix, texteStats);
         infobulle.text = texteinfobulle;
         gameObject.SetActive(true);
     }

@@ -8,24 +8,41 @@ public class marchand : MonoBehaviour
 {
     public GameObject interactionMarchand;
     public GameObject menuMagasin;
+    public GameObject inventairePerso;
     public GameObject joueur;
-    public bool inTrigger;
+    public static bool inTrigger;
     public static bool frozen;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(inTrigger && Input.GetKeyDown(KeyCode.E)) 
+        if (frozen == false)
         {
-            menuMagasin.gameObject.SetActive(!menuMagasin.gameObject.activeSelf);
-            frozen = true;
-
+            if(inTrigger && Input.GetKeyDown(KeyCode.E)) 
+            {
+                interactionMarchand.gameObject.SetActive(!interactionMarchand.gameObject.activeSelf);
+                inventairePerso.transform.localPosition = new Vector3(-400, 0, 0);
+                inventairePerso.gameObject.SetActive(!inventairePerso.gameObject.activeSelf);
+                menuMagasin.transform.localPosition = new Vector3(479, 0, 0);
+                frozen = true;
+            }
+        }
+        else 
+        {
+            if(inTrigger && Input.GetKeyDown(KeyCode.E)) 
+            {
+                interactionMarchand.gameObject.SetActive(!interactionMarchand.gameObject.activeSelf);
+                inventairePerso.transform.localPosition = new Vector3(0, 0, 0);
+                inventairePerso.gameObject.SetActive(!inventairePerso.gameObject.activeSelf);
+                menuMagasin.transform.localPosition = new Vector3(479, 2000, 0);
+                frozen = false;
+            }
         }
     }
 
@@ -49,6 +66,4 @@ public class marchand : MonoBehaviour
         inTrigger = false;
 
     }
-
-
 }
