@@ -27,13 +27,43 @@ public class ItemBaseDeDonnees : MonoBehaviour
     {
         items = new List<Item>()
         {
-            new Item(1, "Parapluie", "description", 0, 1, 10,
+            new Item(1, "Livre", "description", 5, 1, 1,
             new Dictionary<string, int>
             {
                 {"Force", 15},
                 {"Défense", 10}
             }),
-            new Item(2, "Livre", "description", 0, 1, 10,
+            new Item(2, "Parapluie", "description", 15, 1, 1,
+            new Dictionary<string, int>
+            {
+                {"Force", 15},
+                {"Défense", 10}
+            }),
+            new Item(3, "Gants", "description", 15, 1, 1,
+            new Dictionary<string, int>
+            {
+                {"Force", 15},
+                {"Défense", 10}
+            }),
+            new Item(4, "Purell", "description", 15, 1, 1,
+            new Dictionary<string, int>
+            {
+                {"Force", 15},
+                {"Défense", 10}
+            }),
+            new Item(5, "Masque Tissu", "description", 15, 1, 1,
+            new Dictionary<string, int>
+            {
+                {"Force", 15},
+                {"Défense", 10}
+            }),
+            new Item(6, "Masque Medical", "description", 15, 1, 1,
+            new Dictionary<string, int>
+            {
+                {"Force", 15},
+                {"Défense", 10}
+            }),
+            new Item(7, "Masque N95", "description", 15, 1, 1,
             new Dictionary<string, int>
             {
                 {"Force", 15},
