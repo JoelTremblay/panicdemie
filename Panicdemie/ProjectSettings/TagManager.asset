@@ -7,6 +7,7 @@ TagManager:
   - dollars
   - marchand
   - object
+  - ennemi
   layers:
   - Default
   - TransparentFX
