@@ -17,7 +17,16 @@ public class iconeInventaire : MonoBehaviour, IPointerClickHandler, IPointerEnte
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        inventaireUI.gameObject.SetActive(!inventaireUI.gameObject.activeSelf);
+        if (marchand.frozen == false)
+        {
+            inventaireUI.gameObject.SetActive(!inventaireUI.gameObject.activeSelf);
+            marchand.frozen = true;
+        }
+        else 
+        {
+            inventaireUI.gameObject.SetActive(!inventaireUI.gameObject.activeSelf);
+            marchand.frozen = false;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData) {

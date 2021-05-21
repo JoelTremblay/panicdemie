@@ -8,18 +8,32 @@ using UnityEngine.UI;
 public class UIInventaire : MonoBehaviour
 {
     public List<UIItem> uIItems = new List<UIItem>();
+    public List<UIItemMarchand> uIItemsMarchand = new List<UIItemMarchand>();
     public GameObject casePrefab;
+    public GameObject casePrefabMarchand;
     public Transform casePanel;
-    public int nbDeCases = 6;
+    public int nbDeCases;
     public Inventaire inventaire;
 
     private void Awake()
     {
-        for (int i = 0; i < nbDeCases; i++)
+        if (gameObject.name == "inventairePanel")
         {
-            GameObject instance = Instantiate(casePrefab);
-            instance.transform.SetParent(casePanel);
-            uIItems.Add(instance.GetComponentInChildren<UIItem>());
+            for (int i = 0; i < nbDeCases; i++)
+            {
+                GameObject instance = Instantiate(casePrefab);
+                instance.transform.SetParent(casePanel);
+                uIItems.Add(instance.GetComponentInChildren<UIItem>());
+            }
+        }
+        else 
+        {
+            for (int i = 0; i < nbDeCases; i++)
+            {
+                GameObject instance = Instantiate(casePrefabMarchand);
+                instance.transform.SetParent(casePanel);
+                uIItemsMarchand.Add(instance.GetComponentInChildren<UIItemMarchand>());
+            }
         }
     }
 
@@ -28,9 +42,19 @@ public class UIInventaire : MonoBehaviour
         uIItems[caseItem].updateItem(item);
     }
 
+    public void updateCaseMarchand(int caseItem, Item item)
+    {
+        uIItemsMarchand[caseItem].updateItem(item);
+    }
+
     public void ajouterItem(Item item)
     {
         updateCase(uIItems.FindIndex(i => i.item == null), item);
+    }
+
+    public void ajouterItemMarchand(Item item)
+    {
+        updateCaseMarchand(uIItemsMarchand.FindIndex(i => i.item == null), item);
     }
 
     public void retirerItem(Item item)
