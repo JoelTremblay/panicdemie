@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*
+ * Contrôle Scene
+ * Par : Feng Jiayi
+ */
+
 
 public class ButtonPause : MonoBehaviour
 {

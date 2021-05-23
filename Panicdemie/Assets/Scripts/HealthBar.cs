@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
+ * Contrôle barre de vie
+ * Par : Feng Jiayi
+ */
 public class HealthBar : MonoBehaviour
 {
 
