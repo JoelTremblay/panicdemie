@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+/*
+ * Contrôle Score
+ * Par : Feng Jiayi
+ */
+
 
 
 public class compteur : MonoBehaviour

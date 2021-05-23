@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+/*
+ * Contrôle son
+ * Par : Feng Jiayi
+ */
 
 public class son2 : MonoBehaviour
 {

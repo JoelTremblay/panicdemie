@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+/*
+ * Contrôle Time
+ * Par : Feng Jiayi
+ */
+
 
 
 public class timer : MonoBehaviour {
@@ -54,12 +59,12 @@ public string LoadsceneName2;
 
     void LoadScene() {
 
-        SceneManager.LoadScene(LoadsceneName);//倒计时结束跳转到场景,LoadsceneName可以在外部修改
+        SceneManager.LoadScene(LoadsceneName);//lodingScene,LoadsceneName
     }
 
     void LoadScene2()
     {
 
-        SceneManager.LoadScene(LoadsceneName2);//倒计时结束跳转到场景,LoadsceneName可以在外部修改
+        SceneManager.LoadScene(LoadsceneName2);//lodingScene,LoadsceneName
     }
 }

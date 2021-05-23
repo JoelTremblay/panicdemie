@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+/*
+ * Contrôle points
+ * Par : Feng Jiayi
+ */
 
 public class ControleGameObject : MonoBehaviour
 {
