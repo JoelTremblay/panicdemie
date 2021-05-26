@@ -43,6 +43,15 @@ public class marchand : MonoBehaviour
                 menuMagasin.transform.localPosition = new Vector3(479, 2000, 0);
                 frozen = false;
             }
+
+            if(GameObject.Find("ButtonPauseMenu"))
+            {
+                menuMagasin.transform.localPosition = new Vector3(479, 2000, 0);
+            }
+            else if(!GameObject.Find("ButtonPauseMenu") && frozen == false)
+            {
+                inventairePerso.transform.localPosition = new Vector3(0, 0, 0);
+            }
         }
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 /* Gestion des déplacements et collisions de LILO
@@ -21,6 +22,9 @@ public class persoPrincipal : MonoBehaviour
     public Text compteurArgent;
     public static int compteur = 0;
 
+    public static int compteurObjets = 0;
+    public static int compteurEnnemis = 0;
+
     private bool partieTermnine= false;
 
     // Start is called before the first frame update
@@ -28,6 +32,8 @@ public class persoPrincipal : MonoBehaviour
     {
 
         compteur = 0;
+        compteurObjets = 0;
+        compteurEnnemis = 0;
 
     }
 
@@ -96,15 +102,49 @@ public class persoPrincipal : MonoBehaviour
 
         {   
             
-            if(infosCollision.gameObject.tag == "dollars")
+            if(infosCollision.gameObject.tag == "dollarJaune")
             {
 
                 Destroy(infosCollision.gameObject); // détruit les dollars
-                compteur+= 10; //l'argent augmente de 10 dollars si touche le coin jaune
+                compteur+= 10; //l'argent augmente de 10 dollars si touche le coin jaune.
                 compteurArgent.text=""+ compteur;
-
             }
 
+            if(infosCollision.gameObject.tag == "dollarOrange")
+            {
+
+                Destroy(infosCollision.gameObject); // détruit les dollars
+                compteur+= 20; //l'argent augmente de 20 dollars si touche le coin orange.
+                compteurArgent.text=""+ compteur;
+            }
+
+            if(infosCollision.gameObject.tag == "dollarVert")
+            {
+
+                Destroy(infosCollision.gameObject); // détruit les dollars
+                compteur+= 30; //l'argent augmente de 30 dollars si touche le coin vert.
+                compteurArgent.text=""+ compteur;
+            }
+
+        }
+
+    void OnTriggerEnter2D(Collider2D col)
+        {
+            if(col.gameObject.tag == "Ennemi")
+            {
+                Destroy(col.gameObject);
+
+                marchand.frozen = true;
+                if (marchand.frozen == true)
+                {
+                    Destroy(col.gameObject);
+                }
+            }
+
+            if(col.gameObject.tag == "FinGagne")
+            {
+                SceneManager.LoadScene("SceneFinGagne");
+            }
         }
 
 }
