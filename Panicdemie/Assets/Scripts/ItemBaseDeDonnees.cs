@@ -27,48 +27,44 @@ public class ItemBaseDeDonnees : MonoBehaviour
     {
         items = new List<Item>()
         {
-            new Item(1, "Livre", "description", 5, 1, 1,
+            new Item(1, "Livre", "description", 20, 1, 1,
             new Dictionary<string, int>
             {
-                {"Force", 15},
-                {"Défense", 10}
+                {"Force", 5},
+                {"Défense", 5}
             }),
-            new Item(2, "Parapluie", "description", 15, 1, 1,
+            new Item(2, "Parapluie", "description", 40, 1, 1,
             new Dictionary<string, int>
             {
-                {"Force", 15},
-                {"Défense", 10}
+                {"Force", 5},
+                {"Défense", 7}
             }),
             new Item(3, "Gants", "description", 15, 1, 1,
             new Dictionary<string, int>
             {
-                {"Force", 15},
-                {"Défense", 10}
+                {"Défense", 5}
             }),
-            new Item(4, "Purell", "description", 15, 1, 1,
+            new Item(4, "Purell", "description", 25, 1, 10,
             new Dictionary<string, int>
             {
-                {"Force", 15},
-                {"Défense", 10}
+                {"Soin", 20}
             }),
-            new Item(5, "Masque Tissu", "description", 15, 1, 1,
+            new Item(5, "Masque Tissu", "description", 30, 1, 1,
             new Dictionary<string, int>
             {
-                {"Force", 15},
-                {"Défense", 10}
+                {"Défense", 5}
             }),
-            new Item(6, "Masque Medical", "description", 15, 1, 1,
+            new Item(6, "Masque Medical", "description", 50, 1, 1,
             new Dictionary<string, int>
             {
-                {"Force", 15},
-                {"Défense", 10}
+                {"Défense", 7}
             }),
-            new Item(7, "Masque N95", "description", 15, 1, 1,
+            new Item(7, "Masque N95", "description", 70, 1, 1,
             new Dictionary<string, int>
             {
-                {"Force", 15},
                 {"Défense", 10}
             })
         };
     }
+
 }

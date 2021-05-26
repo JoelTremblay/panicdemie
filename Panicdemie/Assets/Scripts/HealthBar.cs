@@ -23,14 +23,7 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthBar.value = (float)life / max;
+        healthBar.value = GameObject.FindWithTag("PlayerUnit").GetComponent<UnitStats>().health / max;
     }
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if(other.transform.tag == "ennemi")
-        {
-            life -= 20;
-        }
-    }
 }

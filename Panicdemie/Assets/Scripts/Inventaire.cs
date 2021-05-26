@@ -143,4 +143,18 @@ public class Inventaire : MonoBehaviour
             donnerItem(id);
         }
     }
+
+    public void purell()//
+    {
+        Item itemVerifier = verifierItem(4);
+        if (itemVerifier != null && GameObject.FindWithTag("PlayerUnit").GetComponent<UnitStats>().health < 100)
+        {
+            GameObject.FindWithTag("PlayerUnit").GetComponent<UnitStats>().health += 20;
+            if (GameObject.FindWithTag("PlayerUnit").GetComponent<UnitStats>().health > 100)
+            {
+                GameObject.FindWithTag("PlayerUnit").GetComponent<UnitStats>().health = 100;
+            }
+            enleverItem(4);
+        }
+    }
 }

@@ -17,16 +17,24 @@ public class infoBulle : MonoBehaviour
 
     public void genererInfoBulle(Item item)
     {
-        string texteStats = "";
-        if (item.stats.Count > 0)
-        {
-            foreach (var stat in item.stats)
+        if (item.id == 0)
             {
-                texteStats += stat.Key.ToString() + ": " + stat.Value.ToString() + "\n";
+                item = null;
             }
+            
+        if(item != null)
+        {
+            string texteStats = "";
+            if (item.stats.Count > 0)
+            {
+                foreach (var stat in item.stats)
+                {
+                    texteStats += stat.Key.ToString() + ": " + stat.Value.ToString() + "\n";
+                }
+            }
+            string texteinfobulle = string.Format("{0}\n{1}\n{2}\n{3}", item.titre, item.description, "Prix: " + item.prix, texteStats);
+            infobulle.text = texteinfobulle;
+            gameObject.SetActive(true);
         }
-        string texteinfobulle = string.Format("{0}\n{1}\n{2}\n{3}", item.titre, item.description, "Prix: " + item.prix, texteStats);
-        infobulle.text = texteinfobulle;
-        gameObject.SetActive(true);
     }
 }

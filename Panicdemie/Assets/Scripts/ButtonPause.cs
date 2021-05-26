@@ -24,6 +24,7 @@ public class ButtonPause : MonoBehaviour
     public void OnRestart(){ // BOUTON = RESTART
         //Loading Scene4 = seceneIntro
         marchand.frozen = false;
+        compteur.Score = 0;
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 

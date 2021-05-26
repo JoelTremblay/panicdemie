@@ -12,14 +12,13 @@ using UnityEngine.SceneManagement;
 
 public class timer : MonoBehaviour {
 
-public int TotalTime = 90;//total
+public int TotalTime = 30;//total90
 public Text TimeText;//UI
 
-private int mumite;//mumite
+private int minute;//minute
 private int second;//second
 
 public string LoadsceneName;// changement scene
-public string LoadsceneName2;
 
 
 
@@ -33,38 +32,32 @@ public string LoadsceneName2;
                                                
             TotalTime--;
             TimeText.text="Time:"+TotalTime;
-            if (TotalTime == 0 && compteur.Score == 50) //time = 0
+            if (TotalTime == 0) //time = 0
             {
                 Destroy(gameObject);
                 LoadScene();
             }
 
-            if (TotalTime == 0 && compteur.Score < 50)
+            if (TotalTime > 0 && compteur.Score2 == 5)
             {
                 Destroy(gameObject);
-                LoadScene2();
+                LoadScene();
             }
 
-            mumite =TotalTime/60; //mumite
+            minute =TotalTime/60; //minute
             second =TotalTime%60; //second
-            string length = mumite.ToString();
+            string length = minute.ToString();
 
             if (second >= 10) { 
-                    TimeText.text = "0" + mumite + ":" + second;
+                    TimeText.text = "0" + minute + ":" + second;
             }     //if second > 10         00：00
             else
-                    TimeText.text = "0" + mumite + ":0" + second;      //if second < 10   00：00
+                    TimeText.text = "0" + minute + ":0" + second;      //if second < 10   00：00
         }
     }
 
-    void LoadScene() {
-
-        SceneManager.LoadScene(LoadsceneName);//lodingScene,LoadsceneName
-    }
-
-    void LoadScene2()
+    void LoadScene() 
     {
-
-        SceneManager.LoadScene(LoadsceneName2);//lodingScene,LoadsceneName
+        SceneManager.LoadScene(LoadsceneName);//lodingScene,LoadsceneName
     }
 }

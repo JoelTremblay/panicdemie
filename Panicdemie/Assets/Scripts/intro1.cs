@@ -13,6 +13,12 @@ public class intro1 : MonoBehaviour
    public void OnStartGame(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        
+        if(sceneName == "Scene")
+        {
+            Destroy(GameObject.Find("son"));
+        }
+        
     }
 
 

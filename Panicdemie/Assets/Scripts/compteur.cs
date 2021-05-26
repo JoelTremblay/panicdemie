@@ -11,18 +11,15 @@ using UnityEngine.UI;
 
 public class compteur : MonoBehaviour
 {
-    public static int Score;
-    public static int Score2;
+    public static int Score = 0;
+    public static int Score2 = 0;
 
     public Text ShowScore;
     public Text ShowScore2;
 
     void Start()
     {
-        Score = 0;
-
         Score2 = 0;
-
     }
 
     // Update is called once per frame

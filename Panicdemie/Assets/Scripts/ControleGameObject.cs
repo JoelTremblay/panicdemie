@@ -19,9 +19,9 @@ public class ControleGameObject : MonoBehaviour
     void OnMouseDown()
     {
         compteur.Score = compteur.Score + 10;
-        compteur.Score2 = compteur.Score2 +1;
-        music.Play();
+        compteur.Score2 = compteur.Score2 + 1;
 
+        persoPrincipal.compteurObjets = persoPrincipal.compteurObjets + 1;
 
         Destroy(this.gameObject);
        
