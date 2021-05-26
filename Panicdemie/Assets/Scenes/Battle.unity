@@ -721,6 +721,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUnitInformation
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011190864930, guid: b81bbe36f448843a684c387beec131e4, type: 3}
+      propertyPath: m_Text
+      value: VIE
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011190864930, guid: b81bbe36f448843a684c387beec131e4, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f3e6a2b5763ef43a08aaee9534e90887, type: 3}
+    - target: {fileID: 114000011190864930, guid: b81bbe36f448843a684c387beec131e4, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011190864930, guid: b81bbe36f448843a684c387beec131e4, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013986306142, guid: b81bbe36f448843a684c387beec131e4, type: 3}
+      propertyPath: m_Text
+      value: ENERGIE
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013986306142, guid: b81bbe36f448843a684c387beec131e4, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f3e6a2b5763ef43a08aaee9534e90887, type: 3}
+    - target: {fileID: 114000013986306142, guid: b81bbe36f448843a684c387beec131e4, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 224000010869422204, guid: b81bbe36f448843a684c387beec131e4, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
